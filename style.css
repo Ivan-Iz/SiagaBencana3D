@@ -1,0 +1,653 @@
+
+/* Pengaturan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f9fc;
+    color: #17243a;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigasi */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #ffffff;
+    border-bottom: 1px solid #e7ebf2;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #ef8d32;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 26px;
+}
+
+.navbar nav a {
+    font-size: 14px;
+    color: #536078;
+}
+
+.navbar nav a:hover {
+    color: #ef8d32;
+}
+
+/* Bagian utama */
+.hero {
+    min-height: 480px;
+    padding: 75px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: linear-gradient(120deg, #102b50, #1d4978);
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.eyebrow {
+    color: #ef9b48;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    font-size: clamp(34px, 4vw, 54px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #ffb45f;
+}
+
+.description {
+    color: #d6e2f1;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #f3983d;
+    color: #17243a;
+    padding: 13px 23px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.btn-primary:hover {
+    background: #ffb45f;
+    transform: translateY(-2px);
+}
+
+/* Ilustrasi sementara */
+.hero-visual {
+    width: 280px;
+    min-width: 220px;
+    min-height: 250px;
+    border: 1px solid #6683a4;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #d6e2f1;
+}
+
+.visual-icon {
+    font-size: 90px;
+    margin-bottom: 12px;
+}
+
+/* Bagian fitur */
+.features {
+    padding: 75px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.section-heading > p:last-child {
+    color: #68758a;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.feature-card {
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #e7ebf2;
+    border-radius: 16px;
+    transition: 0.2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(20, 45, 75, 0.08);
+}
+
+.card-icon {
+    font-size: 35px;
+    margin-bottom: 14px;
+}
+
+.feature-card h3 {
+    margin-bottom: 8px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #68758a;
+}
+
+/* Footer */
+footer {
+    padding: 25px 8%;
+    text-align: center;
+    background: #102b50;
+    color: #d6e2f1;
+    font-size: 13px;
+}
+
+/* Tampilan HP dan tablet */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .hero-visual {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+}
+
+
+
+/* Section materi pembelajaran */
+.learning-section {
+    padding: 75px 8%;
+    background: #eef3f9;
+    scroll-margin-top: 20px;
+}
+
+.material-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.material-btn {
+    padding: 12px 20px;
+    border: 1px solid #cbd6e5;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #17243a;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.material-btn:hover {
+    border-color: #ef983d;
+}
+
+.material-btn.active {
+    background: #173b65;
+    color: #ffffff;
+    border-color: #173b65;
+}
+
+.material-content {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 32px;
+    background: #ffffff;
+    border: 1px solid #dce5ef;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(20, 45, 75, 0.06);
+}
+
+.material-label {
+    margin-bottom: 10px;
+    color: #e8872c;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.material-content h3 {
+    margin-bottom: 12px;
+    font-size: 25px;
+    color: #173b65;
+}
+
+.material-content > p:not(.material-label):not(.material-note) {
+    margin-bottom: 20px;
+    color: #536078;
+}
+
+.material-content ul {
+    padding-left: 22px;
+    margin-bottom: 22px;
+}
+
+.material-content li {
+    padding-left: 5px;
+    margin-bottom: 12px;
+    color: #34445b;
+}
+
+.material-note {
+    padding: 14px 16px;
+    border-left: 4px solid #ef983d;
+    border-radius: 4px;
+    background: #fff5e9;
+    color: #6c4a25;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .learning-section {
+        padding: 50px 5%;
+    }
+
+    .material-content {
+        padding: 22px;
+    }
+
+    .material-content h3 {
+        font-size: 21px;
+    }
+
+    .material-btn {
+        flex: 1 1 100%;
+    }
+}
+
+
+
+/* Section audio narasi */
+.audio-section {
+    padding: 65px 8%;
+    background: #ffffff;
+}
+
+.audio-container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 35px;
+    text-align: center;
+    background: #f0f5fb;
+    border: 1px solid #dce5ef;
+    border-radius: 20px;
+}
+
+.audio-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.audio-container h2 {
+    font-size: 30px;
+    color: #173b65;
+    margin-bottom: 12px;
+}
+
+.audio-description {
+    max-width: 540px;
+    margin: 0 auto 25px;
+    color: #536078;
+}
+
+.audio-container audio {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.audio-caption {
+    margin-top: 15px;
+    color: #68758a;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .audio-section {
+        padding: 45px 5%;
+    }
+
+    .audio-container {
+        padding: 25px 18px;
+    }
+
+    .audio-container h2 {
+        font-size: 24px;
+    }
+}
+
+
+
+/* Section video edukasi */
+.video-section {
+    padding: 75px 8%;
+    background: #f7f9fc;
+}
+
+.video-section .section-heading {
+    max-width: 700px;
+    margin: 0 auto 32px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #102b50;
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(20, 45, 75, 0.14);
+}
+
+.video-container iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-caption {
+    max-width: 900px;
+    margin: 16px auto 0;
+    color: #68758a;
+    font-size: 13px;
+    text-align: center;
+}
+
+.video-caption a {
+    color: #245b91;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .video-section {
+        padding: 50px 5%;
+    }
+
+    .video-container {
+        border-radius: 10px;
+    }
+}
+
+
+/* SIMULASI OBJEK 3D */
+.simulation-section {
+  padding: 75px 8%;
+  background: #ffffff;
+}
+
+.simulation-section .section-heading {
+  max-width: 700px;
+  margin: 0 auto 32px;
+}
+
+.model-card {
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #f7f9fc;
+  border: 1px solid #e3eaf3;
+  border-radius: 18px;
+}
+
+.model-card model-viewer {
+  display: block;
+  width: 100%;
+  height: 420px;
+  background: #edf3fa;
+  --poster-color: #edf3fa;
+}
+
+.model-info {
+  padding: 24px;
+}
+
+.model-info h3 {
+  margin: 0 0 10px;
+  color: #102b50;
+}
+
+.model-info p {
+  margin: 0;
+  color: #68758a;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .simulation-section {
+    padding: 50px 5%;
+  }
+
+  .model-card model-viewer {
+    height: 320px;
+  }
+}
+
+
+
+
+/* KUIS MITIGASI GEMPA */
+.quiz-section {
+  padding: 75px 8%;
+  background: #edf3fa;
+}
+
+.quiz-section .section-heading {
+  max-width: 700px;
+  margin: 0 auto 32px;
+}
+
+.quiz-card {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #e3eaf3;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(16, 43, 80, 0.06);
+}
+
+.quiz-progress {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  color: #68758a;
+  font-size: 14px;
+}
+
+.quiz-progress-track {
+  height: 8px;
+  margin: 14px 0 28px;
+  overflow: hidden;
+  background: #e3eaf3;
+  border-radius: 99px;
+}
+
+#quiz-progress-bar {
+  width: 20%;
+  height: 100%;
+  background: #f29b38;
+  border-radius: 99px;
+  transition: width 0.25s ease;
+}
+
+.quiz-question-title {
+  margin: 0 0 20px;
+  color: #102b50;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.quiz-options {
+  display: grid;
+  gap: 12px;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #d5dfec;
+  border-radius: 10px;
+  cursor: pointer;
+  line-height: 1.6;
+  transition: 0.2s ease;
+}
+
+.quiz-option:hover {
+  border-color: #f29b38;
+  background: #fffaf3;
+}
+
+.quiz-option input {
+  margin-top: 5px;
+  accent-color: #f29b38;
+}
+
+.quiz-option:has(input:checked) {
+  border-color: #f29b38;
+  background: #fff4e5;
+}
+
+.quiz-btn {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 9px;
+  background: #102b50;
+  color: #ffffff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.quiz-btn:hover {
+  opacity: 0.9;
+}
+
+.quiz-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.quiz-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+#quiz-feedback {
+  color: #245b91;
+  line-height: 1.7;
+}
+
+#quiz-result {
+  padding-top: 12px;
+  line-height: 1.7;
+}
+
+#quiz-final-score {
+  color: #102b50;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .quiz-section {
+    padding: 50px 5%;
+  }
+
+  .quiz-card {
+    padding: 18px;
+  }
+
+  .quiz-actions {
+    flex-direction: column;
+  }
+
+  .quiz-btn {
+    width: 100%;
+  }
+}

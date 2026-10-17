@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiagaBencana 3D | Belajar Siaga</title>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">SiagaBencana<span>3D</span></a>
+
+        <nav>
+            <a href="#beranda">Beranda</a>
+            <a href="#materi">Materi</a>
+            <a href="#video-edukasi">Video</a>
+            <a href="#simulasi-3d">Simulasi 3D</a>
+            <a href="#kuis-siaga">Kuis</a>           
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="beranda">
+            <div class="hero-content">
+                <p class="eyebrow">EDUKASI MITIGASI BENCANA</p>
+
+                <h1>Kenali Risiko,<br>
+                    <span>Siap Hadapi Bencana.</span>
+                </h1>
+
+                <p class="description">
+                    Pelajari langkah kesiapsiagaan gempa bumi melalui
+                    materi interaktif, audio, video, dan eksplorasi 3D.
+                </p>
+
+                <a href="#materi" class="btn-primary">
+                    Mulai Belajar &rarr;
+                </a>
+            </div>
+
+            <div class="hero-visual">
+                <div class="visual-icon">🏠</div>
+                <p>Kenali lingkunganmu.</p>
+                <p>Siapkan dirimu.</p>
+            </div>
+        </section>
+
+        <section class="features" id="materi">
+            <div class="section-heading">
+                <p class="eyebrow">JELAJAHI PEMBELAJARAN</p>
+                <h2>Belajar dengan Cara Interaktif</h2>
+                <p>Pilih materi dan mulai tingkatkan kesiapsiagaanmu.</p>
+            </div>
+
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <div class="card-icon">📚</div>
+                    <h3>Materi Edukasi</h3>
+                    <p>Pelajari persiapan sebelum, saat, dan setelah gempa.</p>
+                </article>
+
+                <article class="feature-card" id="simulasi">
+                    <div class="card-icon">🧊</div>
+                    <h3>Eksplorasi 3D</h3>
+                    <p>Jelajahi model 3D untuk mengenali lingkungan sekitar.</p>
+                </article>
+
+                <article class="feature-card" id="kuis">
+                    <div class="card-icon">🎯</div>
+                    <h3>Kuis Interaktif</h3>
+                    <p>Uji pemahamanmu melalui pertanyaan seputar gempa.</p>
+                </article>
+            </div>
+        </section>
+
+        
+        <!-- Materi Mitigasi Gempa -->
+        <section class="learning-section" id="materi-belajar">
+            <div class="section-heading">
+                <p class="eyebrow">PANDUAN KESIAPSIAGAAN</p>
+                <h2>Kenali Langkah Mitigasi Gempa</h2>
+                <p>Pilih tahapan untuk mempelajari tindakan yang perlu dilakukan.</p>
+            </div>
+
+            <div class="material-tabs">
+                <button class="material-btn active"
+                    data-topic="sebelum">
+                    Sebelum Gempa
+                </button>
+
+                <button class="material-btn"
+                    data-topic="saat">
+                    Saat Gempa
+                </button>
+
+                <button class="material-btn"
+                    data-topic="setelah">
+                    Setelah Gempa
+                </button>
+            </div>
+
+            <article class="material-content" aria-live="polite">
+                <p class="material-label" id="material-label">
+                    TAHAP 1
+                </p>
+
+                <h3 id="material-title">Persiapkan Diri Sebelum Gempa</h3>
+
+                <p id="material-description">
+                    Kesiapsiagaan dimulai dari rumah dan lingkungan sekitar.
+                </p>
+
+                <ul id="material-list">
+                    <li>Kenali jalur evakuasi dan tempat berkumpul yang aman.</li>
+                    <li>Siapkan tas siaga berisi kebutuhan darurat.</li>
+                    <li>Pastikan perabot berat terpasang dengan aman.</li>
+                    <li>Ketahui cara melindungi diri saat guncangan terjadi.</li>
+                </ul>
+
+                <p class="material-note" id="material-note">
+                    Tips: diskusikan rencana evakuasi bersama keluarga.
+                </p>
+            </article>
+        </section>
+
+        
+        <!-- Audio Narasi Edukasi -->
+        <section class="audio-section" id="audio-narasi">
+            <div class="audio-container">
+                <div class="audio-icon">🎧</div>
+
+                <p class="eyebrow">DENGARKAN DAN PELAJARI</p>
+                <h2>Belajar Mitigasi Lewat Audio</h2>
+
+                <p class="audio-description">
+                    Dengarkan narasi singkat tentang langkah kesiapsiagaan
+                    menghadapi gempa bumi.
+                </p>
+
+                <audio id="audio-gempa" controls preload="metadata">
+                    <source
+                        src="assets/audio/narasi-gempa.mp3"
+                        type="audio/mpeg">
+                    Browser kamu tidak mendukung pemutar audio.
+                </audio>
+
+                <p class="audio-caption">
+                    Audio edukasi: Kesiapsiagaan Gempa Bumi
+                </p>
+            </div>
+        </section>
+
+
+        <!-- Video Edukasi Mitigasi Gempa -->
+        <section class="video-section" id="video-edukasi">
+            <div class="section-heading">
+                <p class="eyebrow">BELAJAR MELALUI VIDEO</p>
+                <h2>Kenali Tindakan Saat Gempa</h2>
+                <p>
+                    Pelajari panduan mitigasi gempa bumi melalui video edukasi
+                    dari kanal resmi BMKG.
+                </p>
+            </div>
+
+            <div class="video-container">                            
+                <iframe
+                src="https://www.youtube.com/embed/ZO30y0tXPK4"
+                title="Video percobaan pemutar YouTube"
+                width="100%"
+                height="450"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+                </iframe>
+            </div>
+
+            <p class="video-caption">
+                Sumber video:
+                <a
+                    href="https://www.youtube.com/watch?v=DeafytS3Rjw"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Info BMKG — Video Animasi Mitigasi Gempabumi
+                </a>
+            </p>
+        </section>
+
+        
+        <!-- Simulasi 3D -->
+        <section class="simulation-section" id="simulasi-3d">
+        <div class="section-heading">
+            <p class="eyebrow">JELAJAHI OBJEK 3D</p>
+            <h2>Simulasi Mitigasi Gempa</h2>
+            <p>
+            Amati objek tiga dimensi dan gunakan mouse untuk
+            memutar serta memperbesar tampilannya.
+            </p>
+        </div>
+
+        <div class="model-card">          
+            <model-viewer
+                src="assets/models/rumah-3d.glb"
+                alt="Model 3D rumah untuk pembelajaran mitigasi gempa"
+                camera-controls
+                auto-rotate
+                shadow-intensity="1"
+                touch-action="pan-y">
+            </model-viewer>
+
+            <div class="model-info">
+            <h3>Eksplorasi Objek 3D</h3>
+            <p>
+                Klik dan geser untuk memutar objek. Gunakan roda
+                mouse atau gerakan mencubit untuk memperbesar
+                dan memperkecil tampilan.
+            </p>
+            </div>
+        </div>
+  
+        <div class="mitigation-panel">
+        <p class="eyebrow">PANDUAN KESELAMATAN</p>
+        <h3>Kenali Tindakan Mitigasi Gempa</h3>
+        <p class="mitigation-intro">
+            Pilih tahapan berikut untuk mempelajari tindakan
+            yang perlu dilakukan saat menghadapi gempa bumi.
+        </p>
+
+        <div class="mitigation-tabs">
+            <button
+            type="button"
+            class="mitigation-btn active"
+            data-stage="sebelum">
+            Sebelum Gempa
+            </button>
+
+            <button
+            type="button"
+            class="mitigation-btn"
+            data-stage="saat">
+            Saat Gempa
+            </button>
+
+            <button
+            type="button"
+            class="mitigation-btn"
+            data-stage="setelah">
+            Setelah Gempa
+            </button>
+        </div>
+
+        <article class="mitigation-content" aria-live="polite">
+            <h4 id="mitigation-title">Sebelum Gempa</h4>
+
+            <p id="mitigation-description">
+            Persiapkan lingkungan dan perlengkapan agar lebih siap
+            menghadapi gempa bumi.
+            </p>
+
+            <ul id="mitigation-list">
+            <li>Kenali jalur evakuasi dan tempat berlindung yang aman.</li>
+            <li>Amankan lemari serta benda berat agar tidak mudah jatuh.</li>
+            <li>Siapkan tas siaga berisi kebutuhan darurat.</li>
+            </ul>
+        </article>
+        </div>
+        </section>
+
+
+        <!-- Kuis Siaga Bencana -->     
+        <section class="quiz-section" id="kuis-siaga">
+        <div class="section-heading">
+            <p class="eyebrow">UJI PEMAHAMANMU</p>
+            <h2>Kuis Mitigasi Gempa</h2>
+            <p>
+            Jawab lima pertanyaan berikut untuk menguji
+            pemahamanmu tentang kesiapsiagaan gempa bumi.
+            </p>
+        </div>
+
+        <div class="quiz-card">
+            <div class="quiz-progress">
+            <span id="quiz-progress-text">Pertanyaan 1 dari 5</span>
+            <span id="quiz-score-preview">Skor maksimal: 100</span>
+            </div>
+
+            <div class="quiz-progress-track">
+            <div id="quiz-progress-bar"></div>
+            </div>
+
+            <form id="earthquake-quiz">
+            <div id="quiz-questions"></div>
+
+            <p id="quiz-feedback" aria-live="polite"></p>
+
+            <div class="quiz-actions">
+                <button type="button" id="quiz-next" class="quiz-btn">
+                Pertanyaan Berikutnya
+                </button>
+
+                <button type="submit" id="quiz-submit" class="quiz-btn">
+                Lihat Hasil
+                </button>
+
+                <button type="button" id="quiz-restart" class="quiz-btn">
+                Ulangi Kuis
+                </button>
+            </div>
+            </form>
+
+            <div id="quiz-result" aria-live="polite" hidden>
+            <h3>Hasil Kuis Kamu</h3>
+            <p id="quiz-final-score"></p>
+            <p id="quiz-result-message"></p>
+            <button type="button" id="quiz-play-again" class="quiz-btn">
+                Coba Lagi
+            </button>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SiagaBencana 3D. Media Edukasi Mitigasi Bencana.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
